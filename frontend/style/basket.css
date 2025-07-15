@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MenorahGrotesk-Regular"), url("../font/MenorahGrotesk-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local("MenorahGrotesk-Medium"), url("../font/MenorahGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local("MenorahGrotesk-Semi"), url("../font/MenorahGrotesk-Semi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("MenorahGrotesk-Bold"), url("../font/MenorahGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 500;
+  src: local("VisbyCF-Medium"), url("../font/VisbyCF-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 600;
+  src: local("VisbyCF-DemiBold"), url("../font/VisbyCF-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 700;
+  src: local("VisbyCF-Bold"), url("../font/VisbyCF-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 800;
+  src: local("VisbyCF-ExtraBold"), url("../font/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PoiretOne";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PoiretOne-Regular"), url("../font/PoiretOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alistair-Signature";
+  src: local("Alistair-Signature"), url("../font/Alistair-Signature.otf") format("OpenType");
+}
+body, h1, h2, h3, p {
+  margin: 0;
+}
+
+.background-dark {
+  background-color: #090909;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, a, h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body .basket_conteiner {
+  display: flex;
+  gap: 2rem;
+}
+body .basket_conteiner .furniture_list {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  gap: 2rem;
+}
+body .basket_conteiner .furniture_list .tovar_card {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1.6rem;
+  padding: 0;
+}
+body .basket_conteiner .furniture_list .tovar_card img {
+  width: 20rem;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.6rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .furniture_name {
+  font-family: VisbyCF;
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  opacity: 1;
+  margin-bottom: 1.2rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info {
+  position: relative;
+  padding: 1.6rem 0 0 1.6rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .furniture_price {
+  font-size: 2.4rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .heart {
+  margin-right: 0.8rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .heart svg {
+  width: 4rem;
+  height: 4rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .out_of_stock {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  font-size: 2rem;
+  opacity: 1;
+  color: rgb(255, 223, 106);
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .div_action {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+  display: flex;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper {
+  position: absolute;
+  bottom: 1.6rem;
+  right: 1.6rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper input, body .basket_conteiner .furniture_list .tovar_card .div_info .stepper button {
+  font-family: VisbyCF;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  background-color: #4f4f4f;
+  border: none;
+  text-align: center;
+  padding: 1.2rem 1.6rem;
+  color: #fff;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper button {
+  cursor: pointer;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper input {
+  width: 4.5rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper button.decrement {
+  border-radius: 1.6rem 0 0 1.6rem;
+}
+body .basket_conteiner .furniture_list .tovar_card .div_info .stepper button.increment {
+  border-radius: 0rem 1.6rem 1.6rem 0rem;
+}
+body .basket_conteiner .totalPrice_conteiner {
+  width: 40%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 1.6rem;
+  padding: 2.4rem;
+  color: #fff;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body .basket_conteiner .totalPrice_conteiner .countTovar, body .basket_conteiner .totalPrice_conteiner .buttonNextOform {
+  font-family: VisbyCF;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-transform: none;
+}
+body .basket_conteiner .totalPrice_conteiner .countTovar {
+  opacity: 0.6;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #7a7a7a;
+}
+body .basket_conteiner .totalPrice_conteiner .Price {
+  font-family: VisbyCF;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  padding-top: 2rem;
+}
+body .basket_conteiner .totalPrice_conteiner .countTovar, body .basket_conteiner .totalPrice_conteiner .Price {
+  display: flex;
+  justify-content: space-between;
+}
+body .basket_conteiner .totalPrice_conteiner .buttonNextOform {
+  background-color: rgb(255, 223, 106);
+  padding: 1.2rem 0;
+  text-align: center;
+  border-radius: 1.6rem;
+  margin-top: 3.2rem;
+  cursor: pointer;
+}
+body .basket_conteiner .totalPrice_conteiner .buttonNextOform a {
+  color: #000;
+}
+
+.unavailable {
+  opacity: 0.4;
+}/*# sourceMappingURL=basket.css.map */

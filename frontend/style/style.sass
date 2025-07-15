@@ -1,0 +1,1263 @@
+@import "font.sass"
+// @import url("../js/main.js")
+@import "mixin.sass"
+
+
+
+
+.custom-checkbox 
+    position: absolute
+    z-index: -1
+    opacity: 0
+.custom-checkbox+label 
+    display: inline-flex
+    align-items: center
+    cursor: pointer
+.custom-checkbox+label::before 
+    content: ''
+    display: inline-block
+    width: 1.7rem
+    height: 1.7rem
+    flex-shrink: 0
+    flex-grow: 0
+    border: 1px solid #fff
+    border-radius: 0.25em
+    margin-right: 0.5em
+.custom-checkbox:checked+label::before 
+    background-color: $orange-color
+    background-image: url("../img/Path.svg")
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 60% 60%
+    border: 1px solid $orange-color    
+
+
+
+
+
+
+header
+        padding: 11.1rem 2.5rem 3rem 2.5rem
+        overflow-x: hidden
+        nav.fixed_border
+            border-bottom: 1px solid #454545
+        nav.header_hidden
+            opacity: 0
+        nav
+            width: 100%
+            position: fixed
+            top: 0
+            left: 0
+            background-color: #090909
+            z-index: 999
+            padding: 3rem 5rem
+            ul
+                &.header_menu
+                    @include font-Merorah-25-bold
+                    ul.logo
+                        li
+                            a:hover 
+                                color: $orange-color
+                    ul.center 
+                        li
+                            a:hover 
+                                border-bottom: $border-active
+                                padding-bottom: 4.3rem
+                                border-radius: 0.3rem 0.3rem 0px 0px
+                    ul.burger_menu 
+                        display: none
+                &.header_menu,&.center
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                &.action,&.center
+                    @include font-Visby-15-demiBold
+                &.center
+                    li:not(:last-child)
+                        margin-right: 3.5rem
+                    a
+                        display: inline
+                &.action
+                    display: flex
+                    position: relative
+                    li:not(:first-child)
+                        margin-left: 2rem  
+                    li.action_basket 
+                        position: relative
+                        a
+                            position: relative
+                            svg.bask
+                                position: absolute
+                                left: 1.2rem
+                                top: 1.2rem
+                        a:hover path
+                            fill: $orange-color
+                    li.action_voiti 
+                        display: flex
+                        align-items: center
+                        border-radius: 600rem
+                        background: rgba(255, 255, 255, 0.10)
+                        a
+                            display: flex
+                            align-items: center
+                            text-transform: uppercase
+                            @include font-Visby-15-demiBold
+                            padding: 1.2rem 2rem
+                            svg
+                                margin-right: 1rem
+                    li.action_voiti:hover
+                        background: $orange-color
+                    li.action_voiti:hover a
+                        color: $black-color
+                    li.action_voiti:hover path
+                        fill: $black-color
+                    ul.dropdown_authorization 
+                        position: absolute
+                        background: $pop_up
+                        top: 4em
+                        right: 0em
+                        padding: 2rem 3.5rem 2rem 2rem
+                        border-radius: 2rem
+                        opacity: 0
+                        li 
+                            margin: 0
+                            cursor: pointer
+                            a 
+                                @include font-Visby-15-demiBold
+                        li:hover a 
+                            color: $orange-color
+                        li:not(:last-child)
+                            border-bottom: 1px solid rgba(217, 217, 217, 0.12)
+                        li.authorization_vhod 
+                            padding-bottom: 1.6rem
+                        li.authorization_create 
+                            padding-top: 1.6rem
+                    li.action_heart
+                        position: relative
+                        svg 
+                            path.path_action_heart
+                                fill: #000
+                    li.action_heart:hover
+                        svg 
+                            path.path_action_heart
+                                fill: $orange-color 
+                                stroke: $orange-color
+                    ul.dropdown_authorization_active 
+                        opacity: 1
+        div.header_img
+            background-image: url("../img/main.jpg")
+            @include background-img
+            min-height: calc(100vh - 12rem)
+            border-radius: 3.2rem
+            background-color: $black-color
+            filter: saturate(130%)
+            display: flex
+            justify-content: flex-end
+            flex-direction: column
+            padding: 0px 3rem 0px 3rem
+            margin-bottom: 12.7rem
+            div.txt
+                display: flex
+                justify-content: space-between
+                align-items: flex-end
+                margin-bottom: 5.6rem
+                div.h
+                    h1
+                        @include font-h1
+                        white-space: pre-wrap
+                        height: 100%
+                        img
+                            position: relative
+                            top: 1.2rem
+                            left: 2rem
+                    h2
+                        position: absolute
+                        white-space: pre-wrap
+                        bottom: 25.5rem
+                        left: 52rem
+                        @include font-Visby-18-demiBold
+                        width: 100%
+                div.button
+                    position: relative
+                    a
+                        text-transform: uppercase
+                        @include font-Visby-15-demiBold
+                        text-align: center
+                        color: #202020
+                        span
+                            position: absolute
+                            left: 1.3rem
+                            top: 3.1rem
+                    a:hover ellipse
+                        fill: #fff
+            div.bottom
+                border-top: $border-dashed
+                ul.conteiner 
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    li
+                        @include font-Visby-15-medium
+                    ul.slider
+                        display: flex
+                        li
+                            margin-right: 4rem
+                            @include font-Visby-13-demiBold
+                            text-transform: uppercase 
+                    ul.info 
+                        display: flex
+                        align-items: center
+                        margin: 1.2rem 0px
+                        li.number 
+                            @include font-poiret
+                            margin-right: 1.9rem
+                        li.text
+                            white-space: pre-wrap
+                            margin-right: 3rem
+                    ul.down
+                        display: flex
+                        align-items: center
+                        li
+                            img
+                                position: relative
+                                top: 0.5rem
+                                right: 0.3rem
+                            a
+                                opacity: 0.7
+                            a:hover 
+                                opacity: 1
+// темный фон
+article.background-dark
+    padding: 0px 5rem 7.2rem 5rem
+    border-radius: 0px 0px 2.4rem 2.4rem
+    section.two_page
+        display: flex
+        justify-content: space-between
+        margin-bottom: 12.7rem
+        div
+            &.left_img
+                position: relative
+                width: 25%
+                img
+                    width: 30.2rem
+                    height: 53.9rem
+                    &.main_img
+                        z-index: 6
+                        position: relative
+                    &.border
+                        position: absolute
+                        left: 4.5rem
+                        bottom: 3.5rem
+                        z-index: 1
+            &.right_img
+                position: relative
+                width: 20%
+                display: block
+                img
+                    width: 27.2rem
+                    height: 27rem
+                    &.main_img
+                        z-index: 6
+                        position: relative
+                    &.border
+                        position: absolute
+                        z-index: 1
+                        right: 0px
+                        top: -6.8rem
+        div.center_text 
+            color: #fff
+            display: flex
+            flex-direction: column
+            h2
+                text-transform: uppercase
+                @include font-h2
+                margin-bottom: 4.5rem
+                width: 100%
+            h3
+                @include font-ausrtelia
+                color: $orange-color
+                margin-bottom: 3rem
+                width: 100%
+            p
+                @include font-Visby-18-medium
+                opacity: 0.8
+                width: 100%
+            div.button_outline 
+                margin-top: 4rem
+                a
+                    @include font-Visby-15-demiBold
+                    text-transform: uppercase
+                    position: relative
+                    display: inline
+                    span
+                        position: absolute
+                        top: -3.4rem
+                        left: 5.5rem
+                a:hover svg
+                    fill: $orange-color
+                a:hover span
+                    color: $black-color
+    section.list_tovar
+        h2
+            @include font-Menorah-60-medium
+            margin-bottom: 6rem
+        ul.kategor 
+            display: flex
+            border-bottom: 2px solid rgba(255, 255, 255, 0.10)
+            margin-bottom: 4rem
+            li   
+                padding-bottom: 3rem   
+                margin-right: 4rem
+                a
+                    @include font-Visby-20-demiBold
+                    display: flex
+                    align-items: flex-end
+                    img
+                        margin-right: 1rem
+            li.kategor_active
+                border-bottom: $border-active
+                a
+                    color: $orange-color
+                    svg
+                        g
+                            fill: $orange-color
+            li:hover 
+                cursor: pointer
+        div.category_content
+            div.category_filter
+                display: flex
+                margin-bottom: 1rem
+                a.item_dropdown
+                    position: relative
+                div.dropdown, div.dropdown_shkaf_filter_size
+                    a.active_item_dropdown,a.dropdown-size 
+                        border-radius: 60rem
+                        background: rgba(255, 255, 255, 0.10)
+                        margin-right: 1rem
+                        padding: 1.5rem 1.8rem
+                        @include font-Visby-13-demiBold
+                        text-transform: uppercase
+                        border: none
+                        color: #fff
+                        display: flex
+                        align-items: center
+                        a 
+                            display: inline
+                        img.sort_icon
+                            margin-right: 1rem
+                        svg.strelka
+                            margin-left: 1rem
+                        svg.rotate
+                            transform: rotate(180deg)
+                    a
+                        display: none
+            div.disable, .pop_up
+                display: none
+            .pop_up_active
+                display: flex
+                flex-direction: column
+                position: absolute
+                width: 35rem
+                max-height: 35rem
+                border-radius: 1.6rem
+                background: $pop_up
+                padding: 2rem 2.5rem
+                z-index: 100
+                label,a
+                    color: #fff
+                    @include font-Visby-13-demiBold
+                    text-transform: uppercase
+                    cursor: pointer
+                    text-align: center
+                div.item_pop_up
+                    display: flex
+                    align-items: center
+                    input
+                        display: none
+                    label
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+                        padding: 1.1rem 0px
+                svg.cheked_radio 
+                    opacity: 1
+                svg
+                    opacity: 0
+            .color,.size
+                // padding: 2rem
+                .checkbox 
+                    margin: 0px 0px 2rem 1rem
+                    display: flex
+                    align-items: center
+                    label
+                        display: flex
+                        align-items: center
+                        width: 100%
+                        span.cricle 
+                            border-radius: 100%
+                            width: 1.7rem
+                            height: 1.7rem
+                            display: block
+                            margin: 0px 0.5rem 0px 0.8rem
+                .conteiner_checkbox
+                    max-height: 23rem
+                    overflow: auto
+                    margin-bottom: 1rem 
+                .conteiner_checkbox::-webkit-scrollbar 
+                    width: 4px
+                .conteiner_checkbox::-webkit-scrollbar-thumb 
+                    background-color: #c1c1c1
+                    border-radius: 4px
+                .conteiner_checkbox::-webkit-scrollbar-track 
+                    background-color: #666666
+                    border-radius: 4px
+            .size
+                .custom-checkbox+label::before 
+                    margin-right: 1.5rem
+            .price:not(.filter_btn_done )
+                flex-direction: row
+                flex-wrap: wrap
+                column-gap: 1rem
+                div.input_price
+                    width: calc( 50% - 0.5rem )
+                    input 
+                        width: 100%
+                        border-radius: 0.8rem
+                        border: none
+                        padding: 0.6rem 1.2rem
+                        margin-top: 0.6rem
+                        display: block
+                        background: #dadada
+                        border: 1px solid #dadada
+                        height: 3.6rem
+                    input:hover 
+                        background: #fff
+                    input:focus 
+                        outline: 1px solid #0003
+                        box-shadow: 0 0 0 3px $orange-color
+                        background: #fff
+                div.filter_btn_done 
+                    width: 100%
+                    background: $orange-color
+                    border-radius: 1.2rem
+                    padding: 1.5rem 1.8rem
+                    margin-top: 2rem
+                    text-align: center
+                    cursor: pointer
+                    a
+                        color: $black-color
+            div.filter_button
+                display: flex
+                align-items: center
+                gap: 1rem
+                justify-content: space-between
+                div.filter_btn_apply,div.filter_btn_reset
+                    width: 50%
+                    text-align: center
+                    padding: 1.5rem 1.8rem
+                    border-radius: 1.2rem
+                    background: rgba(255, 255, 255, 0.10)
+                    cursor: pointer
+                div.filter_btn_apply
+                    background: $orange-color 
+                    a
+                        color: $black-color
+            div.button_outline
+                display: flex
+                justify-content: center
+                a
+                    position: relative
+                    display: inline
+                    span
+                        position: absolute
+                        left: 5.2rem
+                        bottom: 3.5rem
+                        @include font-Visby-15-demiBold 
+                        text-transform: uppercase
+                a:hover svg
+                    fill: #FFDD62
+                a:hover span
+                    color: $black-color
+                .textResultLoadMore
+                    display: none
+            div.disable
+                a
+                    display: none
+                .textResultLoadMore
+                    display: block
+                    color: #fff
+                    opacity: 0.4
+                    @include font-Visby-16-demiBold
+img.star 
+    width: 9.6rem
+    height: 9.8rem
+// темный фон с загруглением сверху и снизу
+article.top 
+    border-radius: 2.4rem
+    padding: 5rem
+    margin-bottom: 12rem
+    section.galery 
+        div.galery_top
+            display: flex
+            justify-content: space-between
+            align-items: center
+            h2
+                @include font-Menorah-60-medium
+                text-transform: uppercase
+            ul
+                display: flex 
+                li:not(:last-child)
+                    margin-right: 1rem
+                a
+                    @include font-Visby-15-demiBold
+                    text-transform: uppercase
+                    padding: 1.5rem 1.8rem
+                    border-radius: 60rem
+                    border: 2px solid rgba(255,255 ,255 ,0.16)
+                a.active 
+                    background: #fff
+                    color: $black-color
+                a:hover
+                    background-color: #fff
+                    color: $black-color
+        div.galery_foto 
+            display: grid
+            grid-template-rows: 33.2% 33.2% 33.2%
+            grid-template-columns: 33% 33% 33%
+            grid-gap: 0.5rem
+            margin: 5rem 0px 4rem
+            .f1,.f2,.f3,.f4,.f5,.f6
+                @include background-img
+                border-radius: 2.4rem
+            div.f1
+                background-image: url("../img/image 141.jpg")
+            div.f2
+                background-image: url("../img/image 142.jpg")
+            div.f3
+                background-image: url("../img/image 1422.jpg")
+            div.f4
+                background-image: url("../img/image 143.png")
+            div.f5
+                background-image: url("../img/image 144.png")
+            div.f6
+                background-image: url("../img/image 1421.png")
+            div.card_foto
+                height: 64rem
+                position: relative
+                display: flex
+                justify-content: center
+                align-items: center
+                a
+                    text-transform: uppercase
+                    @include font-Visby-15-demiBold
+                    color: $black-color
+                    position: relative
+                    display: none
+                    span
+                        position: absolute
+                        left: 28%
+                        top: 35%
+                div.foto_text
+                    position: absolute
+                    bottom: 0
+                    padding: 2.5rem
+                    display: none
+                    h3
+                        @include font-Visby-32-demiBold
+                    p
+                        @include font-Visby-15-demiBold-130
+                        color: #fff
+            div.card_foto::before 
+                content: ""
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background-color: rgba(0, 0, 0, 0.5)
+                z-index: 1
+                display: none
+            div.card_foto:hover div.foto_text,div.card_foto:hover a
+                display: block
+                z-index: 2
+            div.card_foto:hover:before 
+                display: block
+            div.span2
+                grid-column: span 2
+        div.galery_bottom
+            display: flex
+            justify-content: center
+        div.galery_button 
+            @include font-Visby-15-demiBold 
+            text-transform: uppercase
+            a
+                position: relative
+                display: inline
+                span
+                    position: absolute
+                    top: -3.4rem
+                    left: 5.3rem
+            a:hover path
+                fill: $orange-color
+            a:hover
+                color: $black-color
+    section.slider_inst
+        display: flex
+        justify-content: space-between
+        position: relative
+        div.slider_text
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: 30%
+            img
+                width: 20%
+            div.bottom 
+                h2
+                    @include font-Menorah-80-regular
+                    font-size: 6rem
+                    text-transform: uppercase
+                    white-space: pre-wrap
+                p
+                    @include font-Visby-18-medium
+                    line-height: 2.8rem
+                    color: #fff
+                    margin: 2rem 0px 2.4rem
+                div.slider_button
+                    margin-bottom: 4.3rem
+                    a
+                        @include font-Visby-15-demiBold   
+                        text-transform: uppercase
+                        color: $black-color
+                        position: relative
+                        display: inline
+                        span
+                            position: absolute
+                            left: 2.6rem
+                            top: -3.2rem
+                    a:hover ellipse 
+                        fill: #fff
+        div.slider_foto
+            width: 65%
+            position: relative
+            display: flex
+            max-height: 70.5rem
+            div.phone
+                @include background-img  
+                position: relative
+                width: 34em
+                height: 70.5rem
+                z-index: 4
+                background: url("../img/Object.png")
+                background-size: 99%
+                background-repeat: no-repeat
+                div.img1
+                    height: 71vh
+                    width: 88%
+                    position: absolute
+                    left: 2.2em
+                    top: 2.7em
+                    z-index: 5
+                    background: url("../img/image 149.png")
+                    background-size: 98%
+                    background-repeat: no-repeat
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    a
+                        position: relative
+                        display: none
+                        span
+                            text-transform: uppercase
+                            @include font-Visby-15-demiBold
+                            color: $black-color
+                            position: absolute 
+                            left: 4.6rem
+                            top: 2.7rem
+            div.img2
+                width: 29em
+                height: 59.8rem
+                position: absolute
+                left: 23.7rem
+                top: 5.5rem
+                z-index: 3
+                opacity: 0.6
+                background: url("../img/image 150.png")
+                background-repeat: no-repeat  
+                background-size: cover
+            div.img3
+                background: url("../img/wfzrdv.png")
+                background-repeat: no-repeat  
+                background-size: cover
+                width: 17em
+                height: 53.3rem
+                position: absolute
+                left: 52.6rem
+                top: 8.1rem
+                z-index: 2
+                opacity: 0.3
+                background-position: right top
+            div.img1:hover a
+                display: block
+// светлый
+article.white
+    padding: 0px 5rem
+    section.banner 
+        display: flex
+        align-items: flex-end
+        justify-content: space-between
+        background-image: url("../img/Group 277130520.png")
+        background-color: #fff
+        @include background-img
+        height: 40rem
+        margin: 12rem 0px
+        border-radius: 3.2rem
+        padding: 0px 5rem 4rem 5rem
+        div.text_banner
+            width: 80%
+            position: relative
+            img 
+                position: relative
+                left: 1.9rem
+                top: 2rem
+            h2
+                @include font-h2-80 
+                text-transform: uppercase
+            h3
+                width: 85%
+                @include font-Visby-15-demiBold-130
+                position: absolute
+                left: 44.2rem
+                top: 1.3rem
+        div.button_banner 
+            // width: 20%
+            position: relative
+            a
+                color: $black-color
+                text-transform: uppercase
+                @include font-Visby-15-demiBold
+                span
+                    position: absolute
+                    top: 2.9rem
+                    left: 4.6rem
+            a:hover ellipse
+                fill: $orange-color
+    section.work 
+        margin-bottom: 12rem
+        h2
+            @include font-Menorah-60-regular
+            color: $black-color
+            text-transform: uppercase
+            padding-bottom: 4rem
+            border-bottom: $border-dashed-white
+            margin-bottom: 5rem
+        div.card 
+            display: flex
+            a.card_1:not(:last-child)
+                margin-right: 1rem
+            a.card_1
+                flex: 1
+                background-color: $gray-color
+                border-radius: 2.4rem
+                padding: 2rem
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                div.icons 
+                    display: flex
+                    justify-content: space-between
+                    align-items: flex-start
+                    img.num
+                        padding-top: 0.5rem
+                    svg
+                        width: 7.2rem
+                        height: 7.2rem
+                p
+                    @include font-Visby-32-regular
+                    color: $black-color
+                    margin-top: 10rem
+            a.card_1:hover 
+                background-color: $orange-color
+                cursor: default
+            a.card_1:hover path.white 
+                stroke: #fff
+    section.partner 
+        h2
+            @include font-Menorah-80-regular
+            color: $black-color
+            text-transform: uppercase
+            border-bottom: $border-dashed-gray
+            padding-bottom: 4rem
+            margin-bottom: 5rem
+        div.partner_firm
+            display: flex
+            justify-content: space-between
+            a
+                img
+                    width: 30rem
+                    height: 15rem
+            div.partner_text 
+                width: 60%
+                h3
+                    margin-bottom: 1.5rem
+                    a
+                        @include font-Visby-32-demiBold
+                        color: $black-color
+                        svg
+                            position: relative
+                            top: -1.8rem
+                            left: -0.1rem
+                a:hover
+                    color: $orange-white
+                a:hover path
+                    fill: $orange-white
+                p,a
+                    @include font-Visby-13-medium
+                    color: $gray-2-color
+                    margin-bottom: 5rem
+                div.partner_contact
+                    display: flex
+                    align-items: flex-end
+                    p,a
+                        @include font-Visby-15-demiBold
+                        line-height: 140%
+                        color: $black-color   
+                    span
+                        @include font-Visby-10-medium
+                        color: $gray-2-color
+                    div.adress
+                        margin-right: 1.1rem
+                    p.slash,p.slash2
+                        margin-right: 2.1rem
+                        color: $gray-3-color
+                    p.slash2
+                        margin-right: 1.5rem
+                    div.email
+                        margin-right: 1.2rem
+                    div.email svg,div.phone svg
+                        position: relative
+                        top: -0.4rem
+                        left: 0.4rem
+                    a:hover
+                        color: $orange-white
+                    a:hover path
+                        fill: $orange-white  
+        div.border 
+            border-top: $border-dashed-gray
+            padding-top: 5rem
+            margin: 1rem 0px 7rem
+    section.contact
+        margin-bottom: 12rem
+        h2
+            color: $black-color
+            text-transform: uppercase
+            @include font-Menorah-80-regular
+            margin-bottom: 5rem
+        ul.flex 
+            display: flex
+            border-top: $border-dashed-gray
+            padding: 2.7rem 0px 3.3rem 2rem
+        ul.flex:hover 
+            cursor: pointer
+            background: rgba(255, 223, 106, 1)
+        ul.flex:hover li.first
+            color: #a6a6a6
+
+        ul.contact_messeger
+            border-bottom: $border-dashed-gray
+        li
+            color: $gray-3-color
+            @include font-Visby-32-regular 
+            letter-spacing: normal
+            width: 30%
+            list-style: none
+        li.contact_insta
+            display: flex
+            justify-content: space-between
+        img
+            position: relative
+            top: -1.2rem
+            right: 0.1rem
+            width: 1.6rem
+            height: 1.6rem
+        ul.contact_email
+            img
+                right: 1rem
+                width: 2rem
+                height: 2rem
+        li+li, li>a
+            color: $black-color
+            width: 70%
+        ul.contact_insta
+            display: flex
+            align-items: center
+            li
+                margin-right: 3rem
+                a
+                    @include font-Visby-10-medium 
+                    font-weight: 600
+                    display: flex
+                a:not(:last-child)
+                    padding-right: 3rem
+    section.form
+        margin-bottom: 8rem
+        display: flex
+        flex-direction: column
+        align-items: center
+        div.form_flex
+            width: 38%
+            input[type=text]
+                border: none
+                border-bottom: 1px solid $gray-form
+                width: 100%
+                @include font-Visby-13-demiBold 
+                text-transform: uppercase
+                padding-bottom: 1rem
+                margin-bottom: 4rem
+            input[type=text]:hover
+                border-bottom: 1px solid #000
+            input[type=text]:focus
+                outline: none
+                border-bottom: 1px solid $orange-white
+            input[name=comment]
+                background-image: url("../img/icons8-attachment 1.svg")
+                background-repeat: no-repeat
+                background-position: center right
+            h2
+                @include font-Menorah-60-medium 
+                letter-spacing: -1.2px
+                text-transform: uppercase   
+                color: $black-color
+                margin-bottom: 2.5rem
+            h3
+                opacity: 0.8
+                @include font-Visby-18-medium
+                line-height: 110%
+                color: $black-color
+                margin-bottom: 5rem
+            div.form_soglas
+                display: flex
+                justify-content: space-between
+                label
+                    display: flex
+                    align-items: center
+                    input[type=checkbox]
+                        margin-right: 1rem
+                        width: 2rem
+                        height: 2rem
+                        padding: 0.2rem 0px
+                    input[type=checkbox]+span
+                        color: $gray-form
+                        @include font-Visby-13-regular
+                    input[type=checkbox]+span>a
+                        color: $black-color
+                        text-decoration: underline
+                    input[type=checkbox]+span>a:hover 
+                        color: $orange-white
+                div.form_button
+                    a
+                        color: $black-color
+                        @include font-Visby-15-demiBold 
+                        text-transform: uppercase
+                        position: relative
+                        span
+                            position: absolute
+                            left: 7.3rem
+                            bottom: 3.3rem
+                div.form_button:hover path
+                    fill: $orange-color
+    footer
+        margin-bottom: 4rem
+        ul.footer
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            li,a
+                color: $black-color
+                @include font-Visby-15-regular
+            li.up_menu
+                svg 
+                    width: 7rem
+                    height: 7rem
+                    path.arrow 
+                        fill: #000
+                svg:hover path.cricle
+                    fill: $orange-color
+                    stroke: $orange-color
+                svg:hover path.arrow 
+                    fill: #fff
+            ul.footer_flex 
+                li.font-32
+                    font-size: 3.2rem
+            li.underline
+                a
+                    text-decoration: underline
+                    color: $black-color
+                    @include font-Visby-15-regular
+                a:hover 
+                    color: $orange-white
+span.count
+    height: 2rem
+    width: 2rem
+    background: $orange-color
+    color: $black-color
+    padding: 0px 0.4rem 0.1rem 0.4rem
+    border-radius: 4rem
+    border: 2px solid #0D0D0D
+    @include font-Visby-10-medium
+    font-weight: 700
+    position: absolute
+    top: -0.2rem
+    right: 0px
+    display: flex
+    opacity: 0
+    align-items: center
+    justify-content: center
+span.count_active 
+    opacity: 1
+
+
+div.furniture_list
+            display: grid
+            grid-template-columns: repeat(3, 1fr)
+            gap: 2rem
+            margin-top: 5rem
+            .tovar_card
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                justify-content: space-between
+                border-radius: 1.6rem
+                padding: 1rem
+                margin-bottom: 6rem
+                .div_info
+                    width: 100%
+                    position: relative
+                    flex-grow: 1
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    cursor: pointer
+                    p
+                        @include opacity04_p
+                    img 
+                        width: 100%
+                        object-fit: cover
+                        height: 32.5rem
+                        border-radius: 1.6rem
+                    .div_name 
+                        width: 100%
+                        margin: 2rem 0rem
+                        display: flex
+                        justify-content: space-between
+                        p
+                            @include font-Visby-32-demiBold
+                            opacity: 1
+                            align-self: center
+                    .furniture_size
+                        @include furniture_size
+                    .furniture_color
+                        @include furniture_color
+                    .furniture_price
+                        @include furniture_price
+                    .out_of_stock
+                        font-size: 2rem 
+                        opacity: 1
+                        color: $orange-color
+                        position: absolute
+                        top: 0.8rem
+                        left: 0.8rem
+                .furnitureAddBasket
+                    @include button-outline-orange
+                    p.btn_text
+                        opacity: 1
+                        // margin-left: 1rem
+                        // text-transform: uppercase
+                .basket_added
+                    @include button-fill-orange
+.unavailable
+    opacity: 0.4 !important
+    filter: grayscale(70%)
+.heart 
+    cursor: pointer
+    .path_heart 
+        fill: #00000000
+.heart_added
+    .path_heart 
+        fill: #fff
+
+
+        // поехала шапка
+
+/* === Модальное окно товара === */
+.modal_overlay
+    position: fixed
+    inset: 0
+    background: #0008
+    backdrop-filter: blur(2px)
+    display: flex
+    justify-content: center 
+    align-items: center
+    z-index: 1000
+.modal_window
+    max-width: 90rem
+    width: 90%
+    max-height: 90vh
+    overflow: hidden
+    background: #202020
+    border-radius: 16px
+    animation: show .25s ease-out
+    display: flex             
+    flex-direction: column
+    .modal_content                                    
+        overflow-y: auto
+        padding-bottom: 2.4rem 
+        .modal_inner
+            display: flex
+            .modal_left
+                width: 50%
+                .modal_img
+                    width: 100%
+                    height: 100%
+                    max-height: 55rem
+                    border-radius: 0 0 16px 0
+                .thumbs
+                    display: flex
+                    gap: 12px
+                    margin: 1.6rem 0px 2.4rem 2.4rem
+                    img
+                        width: 9rem
+                        height: 9rem
+                .modal_tryBtn
+                    @include button-outline-orange
+                    color: #fff
+                    padding: 1.8rem 3rem
+                    width: calc( 100% - 2.4rem )
+                    justify-content: center
+                    @include font-Visby-16-demiBold
+                    text-transform: uppercase
+                    margin-left: 24px
+                    svg
+                        width: 2.4rem
+                        height: 2.4rem
+                        margin-right: 0.8rem
+            .modal_info
+                width: 50%
+                overflow-y: auto      
+                padding: 2.4rem
+                color: #fff
+                display: flex
+                flex-direction: column
+                .furniture_name
+                    margin-bottom: 2rem
+                    @include font-Visby-32-demiBold
+                .furniture_size
+                    @include furniture_size
+                    @include opacity04_p
+                .furniture_color
+                    @include furniture_color
+                    p
+                        @include opacity04_p
+                .actionBtn
+                    display: flex
+                    .furnitureAddBasket
+                        @include button-outline-orange
+                        margin: 0 1.6rem 2.4rem 0
+                    .basket_added
+                        @include button-fill-orange
+                    p.btn_text
+                        @include button-text
+                .furniture_price
+                    @include furniture_price
+                .furniture_description
+                    .descTitle
+                        @include font-Visby-28-demiBold
+                        font-size: 2.4rem
+                        text-transform: none
+                        margin-bottom: 0.8rem
+                    .description
+                        @include font-Visby-15-regular
+.modal_close
+    background: none
+    border: 0
+    color: #fff
+    font-size: 32px
+    position: absolute
+    top: 8px
+    right: 12px
+    cursor: pointer
+body.modal-open
+    overflow: hidden
+.qr-overlay
+    position: fixed
+    inset: 0
+    background: rgba(0,0,0,.8)
+    pointer-events: none
+    transition:.3s
+    z-index: 1000
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+.qr-overlay.open
+    opacity:1
+    pointer-events: auto
+    p
+        @include font-Visby-18-demiBold
+.qr-overlay canvas
+    background:#fff
+    padding:8px
+    border-radius:8px
+.qr-overlay .close
+    position: absolute
+    top:20px
+    right:20px
+    background: none
+    border: none
+    font-size:32px
+    color:#fff
+    cursor: pointer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes show
+    from:
+        transform:scale(.9) 
+        opacity:0
+    to: 
+        opacity:1
+
+
+
+
+
+
+
+
+
+
+                
+
+
+
+                            
+
+
+
+                
+
+                

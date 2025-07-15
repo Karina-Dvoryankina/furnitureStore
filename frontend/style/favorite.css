@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MenorahGrotesk-Regular"), url("../font/MenorahGrotesk-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local("MenorahGrotesk-Medium"), url("../font/MenorahGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local("MenorahGrotesk-Semi"), url("../font/MenorahGrotesk-Semi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("MenorahGrotesk-Bold"), url("../font/MenorahGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 500;
+  src: local("VisbyCF-Medium"), url("../font/VisbyCF-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 600;
+  src: local("VisbyCF-DemiBold"), url("../font/VisbyCF-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 700;
+  src: local("VisbyCF-Bold"), url("../font/VisbyCF-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 800;
+  src: local("VisbyCF-ExtraBold"), url("../font/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PoiretOne";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PoiretOne-Regular"), url("../font/PoiretOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alistair-Signature";
+  src: local("Alistair-Signature"), url("../font/Alistair-Signature.otf") format("OpenType");
+}
+body, h1, h2, h3, p {
+  margin: 0;
+}
+
+.background-dark {
+  background-color: #090909;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, a, h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background: #090909;
+  padding: 4rem;
+}
+body .furniture_list {
+  margin: 0;
+}
+body h1 {
+  font-family: Menorah Grotesk;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -1.2px;
+  margin-bottom: 3.2rem;
+}
+body header {
+  padding: 8.5rem 2.5rem 3rem 2.5rem;
+}/*# sourceMappingURL=favorite.css.map */

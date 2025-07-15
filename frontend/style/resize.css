@@ -1,0 +1,93 @@
+html {
+  font-size: 50%;
+}
+
+header nav ul.header_menu ul.center {
+  display: none;
+}
+header nav ul.header_menu ul.burger_menu {
+  display: block;
+  order: 1;
+  width: 33%;
+}
+header nav ul.header_menu ul.burger_menu svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+header nav ul.header_menu ul.logo {
+  order: 2;
+  width: 33%;
+  text-align: center;
+}
+header nav ul.header_menu ul.call {
+  order: 3;
+  width: 33%;
+  position: static;
+  display: flex;
+  justify-content: end;
+}
+header nav ul.header_menu ul.call li.basket a svg.bask {
+  left: 1em;
+  top: -2em;
+}
+header nav ul.header_menu ul.dropdown_authorization {
+  top: 7em;
+}
+header div.header_img div.txt div.h h2 {
+  position: absolute;
+  bottom: 14.2rem;
+  left: 30em;
+}
+header div.header_img div.txt div.h h1 {
+  width: 70%;
+}
+header div.header_img div.txt div.button a span {
+  left: 2.8em;
+  top: 2.7em;
+}
+
+article.background-dark section.two_page {
+  justify-content: space-around;
+}
+article.background-dark section.two_page div.right_img {
+  display: none;
+}
+article.background-dark section.two_page div.center_text {
+  width: auto;
+}
+article.background-dark section.two_page div.center_text div.button_outline a span {
+  top: -2.9em;
+  left: 5.5em;
+}
+article.background-dark section.list_tovar div.shkaf div.button_outline a span {
+  left: 5.5em;
+  bottom: 2.9em;
+}
+
+article.top section.galery div.galery_top {
+  flex-wrap: wrap;
+  margin: 2rem 0px 2.5rem;
+}
+article.top section.galery div.galery_top h2 {
+  margin-bottom: 2.2rem;
+}
+article.top section.galery div.galery_button a span {
+  top: -2.9em;
+  left: 5.4em;
+}
+article.top section.slider_inst div.slider_text div.bottom div.slider_button a span {
+  left: 3.7em;
+  top: -4rem;
+}
+
+article.white section.banner div.button_banner a span {
+  top: 2.7em;
+  left: 5em;
+}
+article.white section.form div.form_flex {
+  width: 60%;
+}
+article.white section.form div.form_flex div.form_soglas div.form_button a span {
+  left: 6.9em;
+  bottom: 3em;
+}/*# sourceMappingURL=resize.css.map */

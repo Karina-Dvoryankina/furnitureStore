@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MenorahGrotesk-Regular"), url("../font/MenorahGrotesk-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local("MenorahGrotesk-Medium"), url("../font/MenorahGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local("MenorahGrotesk-Semi"), url("../font/MenorahGrotesk-Semi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("MenorahGrotesk-Bold"), url("../font/MenorahGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 500;
+  src: local("VisbyCF-Medium"), url("../font/VisbyCF-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 600;
+  src: local("VisbyCF-DemiBold"), url("../font/VisbyCF-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 700;
+  src: local("VisbyCF-Bold"), url("../font/VisbyCF-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 800;
+  src: local("VisbyCF-ExtraBold"), url("../font/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PoiretOne";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PoiretOne-Regular"), url("../font/PoiretOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alistair-Signature";
+  src: local("Alistair-Signature"), url("../font/Alistair-Signature.otf") format("OpenType");
+}/*# sourceMappingURL=font.css.map */

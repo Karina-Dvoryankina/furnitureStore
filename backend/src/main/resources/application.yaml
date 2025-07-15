@@ -1,0 +1,45 @@
+server:
+  port: 8443
+  servlet:
+    context-path: /api
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: changeit
+    key-alias: localcert
+    key-store-type: PKCS12
+jwt:
+  secret: 
+      access: 984hg493gh0439rthr0429uruj2309yh937gc763fe87t3f89723gfsdfghjkllkjhgfdfghfghjhgfghlkjhgfds
+      refresh: sdfghjkjhgfdsasdfghjkhgfdsaasdfghjkllkjhgfdsdfghjkllkjhgfdfghjklfdfghjklkjhgfdfghfddfghjdd
+  lifetime:
+    refresh: 7d
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/furnitureStore
+    username: postgres
+    password: k
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      entityManagerFactoryInterface: jakarta.persistence.EntityManagerFactory
+      ddl-auto: update
+  main:
+    allow-circular-references: true
+  web:
+    resources:
+      static-locations: classpath:/static/, file:./uploads/
+  mail:
+    host: smtp.yandex.ru
+    port: 587
+    username: 
+    password: 
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  

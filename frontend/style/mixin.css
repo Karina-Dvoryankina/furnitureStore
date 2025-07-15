@@ -1,0 +1,31 @@
+body, h1, h2, h3, p {
+  margin: 0;
+}
+
+.background-dark {
+  background-color: #090909;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, a, h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}/*# sourceMappingURL=mixin.css.map */

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/mixin.css">
+    <link rel="stylesheet" href="style/adminPanel.css">
+</head>
+<body>
+    <div class="form_conteiner">
+        <div class="nav">
+            <div class="search-container">
+                <form id="searchForm">
+                    <input type="text" id="query" name="query" placeholder="Введите название или артикул товара">
+                    <button type="submit" class="search_btn">Найти</button>
+                </form>
+            </div>
+            <div class="btn_AddFurniture"><a href="##">Добавить товар</a></div>
+            <div class="btn_CreateInfo"><a href="##">Запросить отчёт</a></div>
+            <div class="form_close">
+                <a href="#" class="voiti_click"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                    <path d="M9.24989 3.52173C7.74001 3.52173 6.49989 4.76184 6.49989 6.27173V9.27173C6.49849 9.37111 6.51685 9.46978 6.55391 9.56201C6.59097 9.65424 6.64599 9.73818 6.71577 9.80896C6.78556 9.87973 6.86871 9.93594 6.96041 9.9743C7.0521 10.0127 7.1505 10.0324 7.24989 10.0324C7.34929 10.0324 7.44769 10.0127 7.53938 9.9743C7.63108 9.93594 7.71423 9.87973 7.78401 9.80896C7.8538 9.73818 7.90882 9.65424 7.94588 9.56201C7.98294 9.46978 8.0013 9.37111 7.99989 9.27173V6.27173C7.99989 5.57262 8.55078 5.02173 9.24989 5.02173H18.2499C18.949 5.02173 19.4999 5.57262 19.4999 6.27173V18.7717C19.4999 19.4708 18.949 20.0217 18.2499 20.0217H9.24989C8.55078 20.0217 7.99989 19.4708 7.99989 18.7717V15.7815C8.0013 15.6821 7.98294 15.5834 7.94588 15.4912C7.90882 15.399 7.8538 15.315 7.78401 15.2443C7.71423 15.1735 7.63108 15.1173 7.53938 15.0789C7.44769 15.0406 7.34929 15.0208 7.24989 15.0208C7.1505 15.0208 7.0521 15.0406 6.96041 15.0789C6.86871 15.1173 6.78556 15.1735 6.71577 15.2443C6.64599 15.315 6.59097 15.399 6.55391 15.4912C6.51685 15.5834 6.49849 15.6821 6.49989 15.7815V18.7717C6.49989 20.2816 7.74001 21.5217 9.24989 21.5217H18.2499C19.7598 21.5217 20.9999 20.2816 20.9999 18.7717V6.27173C20.9999 4.76184 19.7598 3.52173 18.2499 3.52173H9.24989ZM12.2421 8.77368C12.0928 8.77372 11.947 8.81829 11.8232 8.90168C11.6994 8.98508 11.6033 9.10351 11.5472 9.24183C11.4911 9.38014 11.4775 9.53205 11.5082 9.67812C11.539 9.82418 11.6126 9.95776 11.7196 10.0618L13.4384 11.7805L3.75087 11.7717C3.65149 11.7702 3.5528 11.7884 3.46053 11.8254C3.36826 11.8623 3.28426 11.9172 3.21339 11.9869C3.14253 12.0566 3.08622 12.1397 3.04775 12.2313C3.00927 12.323 2.98939 12.4213 2.98926 12.5207C2.98913 12.6201 3.00875 12.7186 3.04699 12.8103C3.08523 12.902 3.14132 12.9853 3.212 13.0551C3.28268 13.125 3.36655 13.1801 3.45872 13.2173C3.55089 13.2545 3.64954 13.273 3.74892 13.2717L13.4403 13.2805L11.7196 15.0012C11.6476 15.0703 11.5902 15.1531 11.5506 15.2447C11.511 15.3363 11.4901 15.4349 11.4891 15.5347C11.4881 15.6344 11.507 15.7334 11.5447 15.8258C11.5824 15.9182 11.6382 16.0021 11.7087 16.0727C11.7793 16.1432 11.8632 16.199 11.9556 16.2367C12.048 16.2744 12.147 16.2933 12.2467 16.2923C12.3465 16.2913 12.4451 16.2704 12.5367 16.2308C12.6283 16.1912 12.7111 16.1337 12.7802 16.0618L15.7802 13.0618C15.9208 12.9211 15.9998 12.7304 15.9998 12.5315C15.9998 12.3326 15.9208 12.1419 15.7802 12.0012L12.7802 9.00122C12.7103 8.92923 12.6266 8.87199 12.5342 8.83291C12.4418 8.79383 12.3424 8.77369 12.2421 8.77368Z" fill="white" />
+                </svg>Выйти</a>
+            </div>
+        </div>
+        <section id="search-results">
+            
+        </section>
+    </div>
+    <div id="modal" class="modal main">
+        <div class="modal-content">
+            <span class="close"><a href="##"><svg class="close_form" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3306 13.3295C13.77 12.8901 14.4823 12.8902 14.9216 13.3295L20.1478 18.5562L25.3745 13.3295C25.8139 12.8902 26.5262 12.8902 26.9655 13.3295C27.4049 13.7688 27.4049 14.4812 26.9655 14.9205L21.7388 20.1473L26.9656 25.3746C27.4049 25.8139 27.4049 26.5263 26.9655 26.9656C26.5261 27.4049 25.8138 27.4049 25.3745 26.9655L20.1478 21.7383L14.9205 26.9655C14.4812 27.4049 13.7688 27.4049 13.3295 26.9655C12.8902 26.5262 12.8902 25.8139 13.3295 25.3745L18.5568 20.1472L13.3306 14.9205C12.8912 14.4811 12.8913 13.7688 13.3306 13.3295Z" fill="white"/>
+                <circle cx="20" cy="20" r="19.5" stroke="white" stroke-opacity="0.2"/>
+                </svg></a></span>
+            <h2>Добавление нового товара</h2>
+            <form id="productForm" class="form_input">
+
+                <div class="mainInfo">
+                    <p class="InfoTittle">Основная информация</p>
+
+                    <textarea id="sku" name="sku" spellcheck="true" rows="1" placeholder="Артикул товара"></textarea>
+                    <label for="sku" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Некоректный артикул или товар с таким артикулом уже существует</label>
+                    
+                    <textarea id="name" name="name" spellcheck="true" rows="1" placeholder="Наименование"></textarea>
+                    <label for="name" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Название товара не может начинаться с цифры или специального символа. И не может превышать 255 символов</label>
+                    
+                    <textarea id="category" name="category" spellcheck="true" rows="1" placeholder="Категория товара"></textarea>
+                    <label for="category" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Данной категории товара не существует</label>
+
+                    <textarea id="manufacturer" name="manufacturer" spellcheck="true" rows="1" placeholder="Производитель"></textarea>
+                    <label for="manufacturer" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Название фирмы не может начинаться с цифры или специального символа. И не может превышать 255 символов</label>
+                
+                    <textarea id="price" name="price" step="0.01" spellcheck="true" rows="1" placeholder="Цена (руб)"></textarea>
+                    <label for="price" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Цена должна быть положительным числом больше нуля, и иметь не более 2 знаков после запятой</label>
+                    
+                    <textarea id="stock" name="stock" spellcheck="true" rows="1" placeholder="Количество товаров на складе"></textarea>
+                    <label for="stock" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Количество товаров должно быть положительным целым числом</label>
+                </div>
+
+                <div class="subInfo">
+                    <p class="InfoTittle">Характиристики</p>
+
+                    <textarea id="width" name="width" spellcheck="true" rows="1" placeholder="Ширина (см)"></textarea>
+                    <label for="width" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Ширина должна быть положительным целым числом больше нуля, и иметь не более 1 знаков после запятой</label>
+
+                    <textarea id="height" name="height" spellcheck="true" rows="1" placeholder="Высота (см)"></textarea>
+                    <label for="height" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Высота должна быть положительным целым числом больше нуля, и иметь не более 1 знаков после запятой</label>
+
+                    <textarea id="depth" name="depth" spellcheck="true" rows="1" placeholder="Глубина (см)"></textarea>
+                    <label for="depth" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Глубина должна быть положительным целым числом больше нуля, и иметь не более 1 знаков после запятой</label>
+
+                    <a id="AddColor">Добавить цвет<span><img src="/img/icons8-добавить-50.png" alt="+"></span></a>
+                    <label for="AddColor" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Добавьте доступные цвета товара</label>
+
+                    <div class="AllColorFurniture"></div>
+                </div>
+
+                <div class="descriptionAndImage">
+                    <p class="InfoTittle">Описание и фото</p>
+
+                    <textarea id="description" name="description" placeholder="Описание" spellcheck="true" rows="1"></textarea>
+                    <label for="description" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Описание не должно превышать 500 символов</label>
+
+                    <textarea id="imageUrl" name="imageUrl" placeholder="Перечислите через запятую URL фото товара" spellcheck="true" rows="1"></textarea>
+                    <label for="imageUrl" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Некорректный формат URL</label>
+                </div>
+
+                <button class="form_button disabled" type="submit"><a href="##">Добавить</a><span>Необходимо заполнить все поля<svg xmlns="http://www.w3.org/2000/svg" width="20" height="7" viewBox="0 0 20 7" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.342773 0C1.40364 0 2.42105 0.421426 3.1712 1.17157L7.1712 5.17157C8.7333 6.73367 11.266 6.73367 12.8281 5.17158L16.8281 1.17157C17.5782 0.421427 18.5956 0 19.6565 0H0.342773Z" fill="#373737"/>
+                    </svg></span></button>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="modalAddColor" class="modal">
+        <div class="modal-content">
+
+            <div class="form_close">
+                <a href="##" class="form_back"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20.2879 29.1621C19.9762 29.4738 19.4738 29.4738 19.1621 29.1621L10.3755 20.3755C10.0637 20.0637 10.0637 19.5614 10.3755 19.2497L19.1621 10.463C19.4738 10.1513 19.9762 10.1513 20.2879 10.463C20.5996 10.7748 20.5996 11.2904 20.2879 11.6021L12.8708 19.0192L29.0517 19.0192C29.4904 19.0192 29.8517 19.3805 29.8517 19.8192C29.8517 20.258 29.4904 20.6192 29.0517 20.6192L12.8708 20.6192L20.2879 28.0364C20.5996 28.3481 20.5996 28.8504 20.2879 29.1621Z" fill="white"/>
+                <circle cx="20" cy="20" r="19.5" stroke="white" stroke-opacity="0.2"/>
+                </svg><span>Назад</span></a>
+                <a href="##" class="close_modal"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3306 13.3295C13.77 12.8901 14.4823 12.8902 14.9216 13.3295L20.1478 18.5562L25.3745 13.3295C25.8139 12.8902 26.5262 12.8902 26.9655 13.3295C27.4049 13.7688 27.4049 14.4812 26.9655 14.9205L21.7388 20.1473L26.9656 25.3746C27.4049 25.8139 27.4049 26.5263 26.9655 26.9656C26.5261 27.4049 25.8138 27.4049 25.3745 26.9655L20.1478 21.7383L14.9205 26.9655C14.4812 27.4049 13.7688 27.4049 13.3295 26.9655C12.8902 26.5262 12.8902 25.8139 13.3295 25.3745L18.5568 20.1472L13.3306 14.9205C12.8912 14.4811 12.8913 13.7688 13.3306 13.3295Z" fill="white"/>
+                <circle cx="20" cy="20" r="19.5" stroke="white" stroke-opacity="0.2"/>
+                </svg></a>
+            </div>
+            
+            <h2>Добавление цвета</h2>
+            <form id="AddColorForm" class="form_input">
+                <div class="InputNameAndHex">
+                    <input type="text" id="nameColor" name="nameColor" placeholder="Название цвета"></input>
+                    <label for="nameColor" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Название цвета не может содержать цифры и специальные символы, а также превышать 100 символов</label>
+
+                    <input type="text" id="HexColor" name="HexColor" placeholder="hex код цвета"></input>
+                    <label for="HexColor" class="error"><img src="img/icons8-ошибка-48.png" alt="error">Некорректный формат hex кода</label>
+                </div>
+                <button class="form_button2 disabled" type="submit"><a href="##">Добавить</a><span>Необходимо заполнить все поля<svg xmlns="http://www.w3.org/2000/svg" width="20" height="7" viewBox="0 0 20 7" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.342773 0C1.40364 0 2.42105 0.421426 3.1712 1.17157L7.1712 5.17157C8.7333 6.73367 11.266 6.73367 12.8281 5.17158L16.8281 1.17157C17.5782 0.421427 18.5956 0 19.6565 0H0.342773Z" fill="#373737"/>
+                    </svg></span></button>
+            </form>
+        </div>
+    </div>
+</body>
+    <script type="module" src="js/adminPanel.js"></script>
+    <script type="module" src="js/module.js"></script>
+</html>

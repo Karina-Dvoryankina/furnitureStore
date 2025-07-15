@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: normal;
+  src: local("MenorahGrotesk-Regular"), url("../font/MenorahGrotesk-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  src: local("MenorahGrotesk-Medium"), url("../font/MenorahGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  src: local("MenorahGrotesk-Semi"), url("../font/MenorahGrotesk-Semi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Menorah Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("MenorahGrotesk-Bold"), url("../font/MenorahGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 500;
+  src: local("VisbyCF-Medium"), url("../font/VisbyCF-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 600;
+  src: local("VisbyCF-DemiBold"), url("../font/VisbyCF-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 700;
+  src: local("VisbyCF-Bold"), url("../font/VisbyCF-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VisbyCF";
+  font-style: normal;
+  font-weight: 800;
+  src: local("VisbyCF-ExtraBold"), url("../font/VisbyCF-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "PoiretOne";
+  font-style: normal;
+  font-weight: normal;
+  src: local("PoiretOne-Regular"), url("../font/PoiretOne-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alistair-Signature";
+  src: local("Alistair-Signature"), url("../font/Alistair-Signature.otf") format("OpenType");
+}
+body, h1, h2, h3, p {
+  margin: 0;
+}
+
+.background-dark {
+  background-color: #090909;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li, a, h1, h2, h3 {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body .container {
+  padding: 20px;
+  text-align: center;
+}
+body .container h1 {
+  color: #000;
+  font-family: VisbyCF;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+  margin-bottom: 2.4rem;
+}
+body model-viewer {
+  width: 100%;
+  height: 70vh;
+  background: #d8d8d8;
+}
+body .unsupported {
+  color: red;
+  margin-top: 20px;
+}
+body .ar-btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  border: 1px solid rgb(255, 223, 106);
+  background: transparent;
+  border-radius: 10rem;
+  padding: 1.2rem 3rem;
+  cursor: pointer;
+  margin-top: auto;
+  background-color: rgb(255, 223, 106);
+  border: none;
+  align-self: flex-start;
+  margin: 1.2rem;
+  font-family: VisbyCF;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  display: inline-block;
+}
+body .ar-btn p.btn_text {
+  font-family: VisbyCF;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+body .ar-btn path {
+  fill: #000;
+}
+body .ar-btn p.btn_text {
+  font-family: VisbyCF;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  color: #fff;
+  color: #000;
+}
+body .ar-hint {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-size: 14px;
+  display: none;
+  animation: pulse 2s infinite;
+}
+body p {
+  font-family: VisbyCF;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  margin-top: 1.2rem;
+}
+
+.ar-model::part(canvas) {
+  width: 100% !important;
+  height: 100% !important;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.ar-label {
+  color: #000;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}/*# sourceMappingURL=ar.css.map */

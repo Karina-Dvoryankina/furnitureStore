@@ -1,0 +1,103 @@
+@import "font.sass"
+@import "mixin.sass"
+body
+    .basket_conteiner
+        display: flex
+        gap: 2rem
+        .furniture_list
+            display: flex
+            width: 60%
+            flex-direction: column
+            gap: 2rem
+            .tovar_card
+                display: flex
+                width: auto
+                flex-direction: row
+                margin: 0
+                background-color: rgba(255, 255, 255, 0.10)
+                border-radius: 1.6rem
+                padding: 0
+                img
+                    width: 20rem
+                    height: 20rem
+                    object-fit: cover
+                    border-radius: 1.6rem
+                // .unavailable
+                //     opacity: 0.4
+                .furniture_name
+                    @include font-Visby-32-demiBold
+                    opacity: 1
+                    margin-bottom: 1.2rem
+                .div_info
+                    position: relative
+                    padding: 1.6rem 0 0 1.6rem
+                    .furniture_price
+                        font-size: 2.4rem
+                    .heart
+                        margin-right: 0.8rem
+                        svg
+                            width: 4rem
+                            height: 4rem
+                    .out_of_stock
+                        position: absolute
+                        bottom: 1em
+                        right: 1em
+                        font-size: 2rem 
+                        opacity: 1
+                        color: $orange-color
+                    .div_action
+                        position: absolute
+                        top: 1.6rem
+                        right: 1.6rem
+                        display: flex
+                    .stepper
+                        position: absolute
+                        bottom: 1.6rem
+                        right: 1.6rem
+                        input,button
+                            @include font-Visby-20-demiBold
+                            font-size: 1.8rem
+                            background-color: #4f4f4f
+                            border: none
+                            text-align: center
+                            padding: 1.2rem 1.6rem
+                            color: #fff
+                        button
+                            cursor: pointer
+                        input
+                            width: 4.5rem
+                        button.decrement
+                            border-radius: 1.6rem 0 0 1.6rem
+                        button.increment
+                            border-radius: 0rem 1.6rem 1.6rem 0rem
+        .totalPrice_conteiner
+            width: 40%
+            background-color: rgba(255, 255, 255, 0.10)
+            border-radius: 1.6rem
+            padding: 2.4rem
+            color: #fff
+            height: fit-content
+            .countTovar, .buttonNextOform
+                @include font-Visby-20-demiBold
+                text-transform: none
+            .countTovar
+                opacity: 0.6
+                padding-bottom: 2rem
+                border-bottom: 1px solid #7a7a7a
+            .Price
+                @include font-Visby-28-demiBold
+                padding-top: 2rem
+            .countTovar,.Price
+                display: flex
+                justify-content: space-between
+            .buttonNextOform
+                background-color: $orange-color
+                padding: 1.2rem 0
+                text-align: center
+                border-radius: 1.6rem
+                margin-top: 3.2rem
+                cursor: pointer
+                a
+                    color: #000
+.unavailable
+    opacity: 0.4

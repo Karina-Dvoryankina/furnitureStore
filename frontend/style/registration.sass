@@ -1,0 +1,65 @@
+@import "style.sass"
+@import "font.sass"
+@import "mixin.sass"
+@import "vhod.sass" 
+
+
+body 
+    div.form_vhod_conteiner 
+        div.form_vhod 
+            padding: 1.6rem
+            div.form_text
+                margin: 2rem 0px 2.6rem
+            div.form_close
+                div.form_back 
+                    a
+                        cursor: default
+            div.form_button 
+                span
+                    display: none
+                    top: -6.6rem
+                    right: 4.7rem
+                    text-align: center
+                    left: calc(80% - 29.7rem)
+                svg
+                    display: none
+            div.disabled
+                a
+                    opacity: 0.4
+                span,svg
+                    display: block
+            div.form_input
+                input 
+                    color: #bcbcbc
+        div.form_step 
+            display: flex
+            justify-content: center
+            gap: 3.6rem
+            margin-bottom: 2rem
+            div.step1,div.step2 
+                background: rgba(255, 255, 255, 0.20)
+                width: 2.8rem
+                height: 2.8rem
+                flex-shrink: 0
+                border-radius: 100%
+                display: flex
+                justify-content: center
+                align-items: center
+                @include font-Visby-13-demiBold
+                font-size: 1.4rem
+            div.step2
+                position: relative
+                border: 1px solid rgba(255, 255, 255, 0.20)
+                background: transparent
+                opacity: 0.24
+            div.step2:before 
+                content: ""
+                border-bottom: 1px solid rgb(255, 255, 255)
+                width: 4.6rem
+                position: absolute
+                left: -225%
+        
+                
+
+
+

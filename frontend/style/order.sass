@@ -1,0 +1,373 @@
+@import "font.sass"
+// @import url("../js/main.js")
+@import "mixin.sass"
+a
+    cursor: pointer
+p 
+    color: #fff
+article
+    .form_back
+        a
+            display: inline-flex
+            align-items: center
+            @include font-Visby-15-regular 
+            padding: 15px 15px 15px 0
+            span
+                margin-left: 1rem
+    h1 
+        margin: 5rem 0 
+    .orderProcessing
+        display: flex
+        align-items: center
+        @include font-Visby-15-demiBold
+        text-transform: uppercase
+        margin-bottom: 2.4rem
+        .point
+            padding: 0.5rem 1.1rem
+            border-radius: 100%
+            background-color: $orange-white
+            opacity: 0.9
+            margin-right: 1.2rem
+        p 
+            color: #fff
+    .grid
+        display: grid
+        grid-template-columns: calc( 70% - 2.4rem ) calc( 30% - 2.4rem)
+        gap: 4.8rem
+        .card
+            position: relative
+            background-color: rgba(255, 255, 255, 0.10)
+            border-radius: 1.6rem
+            padding: 1.6rem
+            display: flex
+        .card_border
+            border: 1px solid transparent
+            transition: border-color 0.3s ease
+            &:has(input[type="radio"]:checked) 
+                border: 1px solid $orange-color
+        .blockDelivery
+            display: grid
+            grid-template-columns: calc( 50% - 0.8rem ) calc( 50% - 0.8rem )
+            gap: 1.6rem
+            margin-bottom: 2.4rem
+            .card
+                .icon
+                    margin-right: 1.8rem
+                .cardPickup__icon
+                    path
+                        stroke: #fff
+                .cardDelivery__icon
+                    path
+                        fill: #fff
+                .text
+                    width: 100%
+        .radio
+            input[type="radio"]
+                width: 2rem
+                height: 2rem
+                accent-color: $orange-color
+                cursor: pointer
+                &::before 
+                    content: ''
+                    position: absolute
+                    top: -10px
+                    left: -10px
+                    right: -10px
+                    bottom: -10px
+        .title
+            @include font-Visby-16-Bold
+            margin-bottom: 0.6rem
+        .subtitle
+            @include font-Visby-15-regular
+            line-height: 120%
+            opacity: 0.5
+        .block-address_pickup
+            display: none
+            grid-template-columns: 40% 60%
+            gap: 1.2rem
+            border-radius: 1.6rem
+            @include font-Visby-16-Bold
+            border: 1px solid $gray-2-color
+            margin-bottom: 4rem
+            .contact-address 
+                padding: 2.4rem 0 0 1.6rem
+                .address-line 
+                    display: flex
+                    margin-bottom: 1.4rem
+                    .address-name
+                        color: #fff
+                        margin-bottom: 0.5rem
+                    .work-hours
+                        @include font-Visby-13-medium
+                        font-size: 1.4rem
+                        color: #7e7e7e
+                .address-icon, .phone-line
+                    path
+                        fill: #fff
+                .address-text
+                    margin-left: 1.2rem
+                .contact-phone 
+                    font-size: 1.4rem
+                    .phone-link
+                        display: flex
+                        align-items: center
+                        padding: 1rem 1rem 1rem 0
+                        .phone-line
+                            margin-right: 1.2rem
+            .address-map
+                iframe
+                    width: calc( 100% - 1.2rem )
+                    border-radius: 1.6rem
+        // .select_delivery
+        //     display: grid
+        // .block-recipient
+        //     display: flex
+        //     justify-content: space-between
+        //     .change-recipient
+        //         .checkbox-ios 
+        //             display: inline-flex
+        //             align-items: center
+        //             height: 28px
+        //             line-height: 28px
+        //             margin-right: 10px      
+        //             position: relative
+        //             vertical-align: middle
+        //             font-size: 14px
+        //             user-select: none
+        //             color: #fff
+        //             @include font-Visby-16-demiBold
+        //             font-weight: 400
+        //             .checkbox-ios-switch 
+        //                 margin-right: 1.2rem
+        //                 position: relative
+        //                 display: inline-block
+        //                 box-sizing: border-box	
+        //                 width: 52px
+        //                 height: 28px
+        //                 border: 1px solid rgba(0, 0, 0, .1)
+        //                 border-radius: 25%/50%
+        //                 vertical-align: top
+        //                 background: #515151
+        //                 transition: .2s
+        //             .checkbox-ios-switch:before 
+        //                 content: ''
+        //                 position: absolute
+        //                 top: 2px
+        //                 left: 2px
+        //                 display: inline-block
+        //                 width: 22px
+        //                 height: 22px
+        //                 border-radius: 50%
+        //                 background: white
+        //                 box-shadow: 0 3px 5px rgba(0, 0, 0, .3)
+        //                 transition: .15s
+        //             input[type=checkbox] 
+        //                 display: block
+        //                 width: 0
+        //                 height: 0
+        //                 position: absolute
+        //                 z-index: -1
+        //                 opacity: 0
+        //             input[type=checkbox]:not(:disabled):active + .checkbox-ios-switch:before 
+        //                 box-shadow: inset 0 0 2px rgba(0, 0, 0, .3)
+        //             input[type=checkbox]:checked + .checkbox-ios-switch 
+        //                 background: $orange-white
+        //             input[type=checkbox]:checked + .checkbox-ios-switch:before 
+        //                 transform: translateX(2.4rem)
+        //             input[type="checkbox"]:not(:disabled) + .checkbox-ios-switch 
+        //                 cursor: pointer
+        //                 border-color: rgba(0, 0, 0, .3)
+        //             input[type=checkbox]:disabled + .checkbox-ios-switch 
+        //                 filter: grayscale(70%)
+        //                 border-color: rgba(0, 0, 0, .1)
+        //             input[type=checkbox]:disabled + .checkbox-ios-switch:before 
+        //                 background: #eee
+        //         &.focused .checkbox-ios-switch:before 
+        //             box-shadow: inset 0px 0px 4px #ff5623
+        .block-cardRecipient
+            margin-bottom: 4rem
+            .cardRecipient-icon
+                margin-right: 1.2rem
+                path
+                    fill: #fff
+            .error
+                @include font-Visby-13-medium
+                color: #ff5623
+                text-transform: uppercase
+        .block__cardPay
+            display: flex
+            gap: 1.2rem
+            .radio
+                align-items: center
+                input[type="radio"]
+                    margin: 0
+            label
+                @include font-Visby-16-Bold
+                font-size: 1.4rem
+                margin-left: 1.2rem
+                color: #fff
+        .block-address_delivery
+            display: none
+            grid: 1fr 1fr / 1fr 1fr 1fr
+            column-gap: 2.4rem
+            .group        
+                position: relative
+                margin-bottom:2.4rem
+                @include font-Visby-18-medium 
+                input        
+                    padding:10px 10px 10px 5px
+                    display: block
+                    width:100%
+                    border: none
+                    border-bottom:1px solid $gray-2-color
+                    background-color: transparent
+                input:focus     
+                    outline: none
+                label          
+                    color:#fff
+                    font-weight: normal
+                    position: absolute
+                    pointer-events: none
+                    left:5px
+                    top:10px
+                    transition:0.2s ease all
+                    -moz-transition:0.2s ease all
+                    -webkit-transition:0.2s ease all   
+                input:focus ~ label, input:not(:placeholder-shown) ~ label
+                    top:-1.2rem
+                    font-size:14px
+                    color: $gray-2-color
+                input,span,label
+                    @include font-Visby-16-Bold
+                    font-weight: 400
+                    color: #fff
+                .error
+                    display: block
+                    margin-top: 8px
+                    font-size: 14px
+                    color: #ff5e5e
+            .line
+                grid-column: span 3
+                #suggestions-wrapper 
+                    position: relative
+                    width: 100%
+                    .suggestions 
+                        position: absolute
+                        width: 100%
+                        max-height: 200px
+                        overflow-y: auto
+                        background-color: #fff
+                        z-index: 1000
+                        list-style: none
+                        padding: 0
+                        margin: 0
+                        li 
+                            @include font-Visby-13-regular
+                            font-size: 1.4rem
+                            padding: 1.2rem 1.6rem
+                            cursor: pointer
+                            color: #000
+                        li:hover 
+                            background: #f0f0f0
+            .checkbox-saveАddress
+                color: #fff
+                @include font-Visby-13-regular
+                font-size: 1.4rem
+                display: flex
+                align-items: center
+                margin-bottom: 4rem
+                cursor: pointer
+                input[type="checkbox"] 
+                    appearance: none
+                    width: 2rem
+                    height: 2rem
+                    border: 1px solid #fff
+                    border-radius: 0.4rem
+                    margin-right: 0.8rem
+                    cursor: pointer
+                    &:checked 
+                        background-color: $orange-white
+                        border-color: $orange-white
+                        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e")
+                    &::after 
+                        content: ''
+                        position: absolute
+                        left: 6px
+                        top: 2px
+                        width: 5px
+                        height: 10px
+                        border: solid white
+                        border-width: 0 2px 2px 0
+                        transform: rotate(45deg)
+        .select_delivery
+            display: grid
+    .blockPay
+        input[type="submit"]
+            width: 100%
+            padding: 2rem
+            text-align: center
+            border-radius: 40rem
+            border: none
+            background: $orange-color
+            @include font-Visby-15-demiBold
+            font-size: 1.4rem
+            text-transform: uppercase
+            margin-bottom: 1.6rem
+            cursor: pointer
+        .cardOrderSum
+            background-color: rgba(255, 255, 255, 0.10)
+            padding: 2rem
+            border-radius: 2.4rem
+            @include font-Visby-13-regular
+            font-size: 1.4rem
+            color: #fff
+            .cardOrderSum__info
+                display: grid
+                row-gap: 0.8rem
+                grid: 1fr 1fr / 1fr 1fr
+                margin-bottom: 1.2rem
+                .price
+                    text-align: end
+                .total-price
+                    font-weight: bold
+            .cardOrderSum__total
+                display: flex
+                justify-content: space-between
+                border-top: 1px solid $gray-2-color
+                padding-top: 1.2rem
+                p
+                    @include font-Visby-16-Bold
+                    font-size: 1.8rem
+                    text-transform: uppercase
+            
+// НА СТРАНИЦЕ ОФОРМЛЕНИЕ ЗАКАЗА ПЕРЕНАПРАВЛЯТЬ НА АВТОРИЗАЦИЮ ЕСЛИ НЕ АВТОРИЗОВАН, ПОСЛЕ КЛИНА НА КНОПКУ ВЫЙТИ ПОЛЬЗОВАТЕЛЬ ВСЕ ЕЩЕ НА СТРАНИЦЕ
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes inputHighlighter 
+  from 
+    background:#5264AE
+  to  
+    width: 0 
+    background: transparent
+
+@-moz-keyframes inputHighlighter 
+  from 
+    background:#5264AE
+  to  
+    width: 0
+    background: transparent
+
+@keyframes inputHighlighter 
+  from 
+    background:#5264AE
+  to  
+    width: 0
+    background: transparent
